@@ -3,6 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DistPDFParserManager" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/manager" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/worker" vcs="Git" />
   </component>
 </project>
