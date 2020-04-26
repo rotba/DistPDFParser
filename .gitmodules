@@ -1,0 +1,6 @@
+[submodule "worker"]
+	path = worker
+	url = https://github.com/rotba/DistPDFParserWorker.git
+[submodule "manager"]
+	path = manager
+	url = https://github.com/rotba/DistPDFParserManager.git
