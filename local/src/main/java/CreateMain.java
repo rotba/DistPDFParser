@@ -1,10 +1,9 @@
-import software.amazon.awssdk.auth.credentials.*;
 import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.ec2.model.*;
 
 import java.util.Base64;
 
-public class Main {
+public class CreateMain {
     private static final String MANAGER_TAG = "Manager";
 
     public static void main(String[] args) {
@@ -13,14 +12,22 @@ public class Main {
         String awsAccessKeyId = args[1];
         String awsSecretAccessKey = args[2];
         String script = String.join("\n",
+                "#!/bin/bash",
                 "set -e -x",
+//                "output : { all : '| tee -a /var/log/cloud-init-output.log' }",
                 String.format("aws configure set aws_access_key_id %s", awsAccessKeyId),
-                String.format("aws configure set aws_secret_access_key", awsSecretAccessKey),
+                String.format("aws configure set aws_secret_access_key %s", awsSecretAccessKey),
                 "cd ..",
                 "cd /home/ec2-user",
-                "if [ -d \"DistPDFParserManager\" ]; then git clone https://github.com/rotba/DistPDFParserManager.git; fi",
-                "cd DistPDFParserManager",
-                "git pull",
+                "if [ -d \"DistPDFParser\" ]; then echo \"Repo exists\" ;",
+                "else",
+                "git clone https://github.com/rotba/DistPDFParser.git",
+                "cd DistPDFParser",
+                "git submodule init",
+                "git submodule update manager;",
+                "fi",
+                "cd manager",
+                "git pull origin master",
                 "mvn install",
                 "cd target",
                 "java -jar theJar.jar"

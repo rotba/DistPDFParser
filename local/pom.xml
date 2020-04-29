@@ -28,7 +28,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>Main</mainClass>
+                            <mainClass>CreateMain</mainClass>
                         </manifest>
                     </archive>
                     <finalName>myJar</finalName>
