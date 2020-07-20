@@ -7,5 +7,5 @@ The abstract archtechture is depicted in the following figure.
 
 ![architecture](https://github.com/rotba/DistPDFParser/blob/[branch]/arch.png?raw=true)
 
-![architecture](https://github.com/rotba/DistPDFParser/blob/[branch]/arch.png)
+![architecture](https://github.com/rotba/DistPDFParser/blob/master/arch.png)
 
