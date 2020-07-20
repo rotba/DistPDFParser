@@ -5,4 +5,4 @@ The application parses unbound number of PDF files using scalable number of comp
 
 The abstract archtechture is depicted in the following figure.
 
-![alt text](https://github.com/rotba/DistPDFParser/blob/[branch]/arch.jpg?raw=true)
+![architecture](https://github.com/rotba/DistPDFParser/blob/[branch]/arch.png?raw=true)
