@@ -1,5 +1,5 @@
 # DistPDFParser
-This project is an exersice in distributed programming, introduced in BGU in the course 'Distributed Programming'.
+This project is an exersice in distributed programming, introduced in the course 'Distributed Programming' in Ben-Gurion University of Negev.
 
 The application parses unbound number of PDF files using scalable number of computing units using AWS framework components such as EC2, S3, SQS etc.
 
